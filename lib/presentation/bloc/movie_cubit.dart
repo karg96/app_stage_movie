@@ -28,7 +28,9 @@ class MovieCubit extends Cubit<MovieState> {
     required this.getFavoriteMoviesUseCase,
     required this.toggleFavoriteMovieUseCase,
     required this.isFavoriteMovieUseCase,
-  }) : super(MovieStateLoading());
+  }) : super(MovieStateLoading()){
+    fetchMovies();
+  }
 
   // Fetch popular movies
   Future<void> fetchMovies() async {

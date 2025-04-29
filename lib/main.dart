@@ -33,7 +33,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (_)=> getIt<MovieCubit>()..fetchMovies(),
+      lazy: false,
+      create: (_)=> getIt<MovieCubit>(),
       child: MaterialApp(
         title: AppConstants.appName,
         debugShowCheckedModeBanner: false,
